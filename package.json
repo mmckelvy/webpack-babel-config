@@ -1,0 +1,46 @@
+{
+  "name": "@mmckelvy/webpack-babel-config",
+  "version": "1.0.0",
+  "description": "A reference configuration for Webpack and Babel",
+  "main": "index.js",
+  "author": "Mark McKelvy",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.4.5",
+    "@babel/preset-env": "^7.4.5",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.6",
+    "webpack": "^4.34.0",
+    "webpack-cli": "^3.3.4",
+    "webpack-merge": "^4.2.1"
+  },
+  "babel": {
+    "presets": [
+      [
+        "@babel/preset-env",
+        {
+          "modules": false,
+          "targets": {
+            "browsers": [
+              "last 2 Chrome versions",
+              "last 2 Edge versions",
+              "last 2 Safari versions",
+              "last 2 Firefox versions",
+              "last 2 iOS versions",
+              "last 2 ChromeAndroid versions"
+            ]
+          }
+        }
+      ],
+      "@babel/preset-react"
+    ],
+    "plugins": [
+      [
+        "@babel/plugin-proposal-object-rest-spread",
+        {
+          "useBuiltIns": true
+        }
+      ]
+    ]
+  }
+}

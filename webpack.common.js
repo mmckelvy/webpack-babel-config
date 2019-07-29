@@ -1,5 +1,5 @@
-const path = require('path')
-const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const path = require('path');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 const common = {
   entry: path.resolve(__dirname, 'static/js/src/index.js'),
@@ -35,6 +35,6 @@ const common = {
       }
     ]
   }
-}
+};
 
-module.exports = common
+module.exports = common;
